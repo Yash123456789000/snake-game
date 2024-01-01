@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake-Mania</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <style>
+    .layer1_class{
+      position: fixed;
+      width: 100%;
+      margin: 0px;
+      z-index: 2;
+    }
+    .center {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+    .wave {
+      width: 5px;
+      height: 100px;
+      background: linear-gradient(45deg, cyan, #fff);
+      margin: 10px;
+      animation: wave 1s linear infinite;
+      border-radius: 20px;
+    }
+    .wave:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    .wave:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    .wave:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+    .wave:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+    .wave:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+    .wave:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+    .wave:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+    .wave:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+    .wave:nth-child(10) {
+      animation-delay: 0.9s;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+
+    @media screen and (max-width: 450px){
+      .wave{
+        height: 85px;
+        width: 3px;
+        margin: 5px;
+        border-radius: 10px;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
+  <script>  
+     $(window).on('load', function () {  
+         $(".layer1_class").fadeOut("slow");  
+    });  
+  </script>
+  <body>
+    <div class="body">
+      <div id="layer1" class="layer1_class">
+        <div class="center">
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+      </div>
+      <div id="scoreBox">Score: 0</div>
+      <div id="hiscoreBox">High-Score: 0</div>
+      <div id="board"></div>
+    </div>
+  </body>
+  <script src="js/index.js"></script>
+</html>
