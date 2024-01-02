@@ -95,8 +95,13 @@
       }
       .button-pad{
         position: absolute;
-        margin-top: 500px;
+        margin-top: 520px;
         display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .down-btn{
+        grid-column-start: 2;
+        grid-column-end: 3;
       }
       .button{
         border-radius: 7px;
@@ -129,10 +134,10 @@
       <div id="hiscoreBox">High-Score: 0</div>
       <div id="board"></div>
       <div class="button-pad">
-        <button class="button up-btn" onclick="handleButtonClick('ArrowUp')">↑</button>
         <button class="button left-btn" onclick="handleButtonClick('ArrowLeft')">←</button>
-        <button class="button down-btn" onclick="handleButtonClick('ArrowDown')">↓</button>
+        <button class="button up-btn" onclick="handleButtonClick('ArrowUp')">↑</button>
         <button class="button right-btn" onclick="handleButtonClick('ArrowRight')">→</button>
+        <button class="button down-btn" onclick="handleButtonClick('ArrowDown')">↓</button>
       </div>
     </div>
   </body>
