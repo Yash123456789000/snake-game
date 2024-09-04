@@ -91,7 +91,7 @@ function gameEngine(){
     if(snakeArr[0].y === food.y && snakeArr[0].x === food.x){
         foodSound.play();
         score += 1;
-        if(score >= 20){
+        if(score >= 10){
             if(temp1==0){
                 alert("From now food will also start to move, so be careful and quick!");
             }            
